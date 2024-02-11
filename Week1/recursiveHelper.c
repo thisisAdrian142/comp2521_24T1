@@ -20,11 +20,15 @@ struct node*doListAppend(struct node*node, int value){
     }
 } 
 
-//* side notes:
-// we cant recurse this "listAppend" function
-// since the recursive function needs to take in
-// a struct node pointer
+//* base case:
+// if the passed "node" is NULL (at the end of the list)
+// -> creates a new node by using "newNode" -> return the node.
 
-//* solution -> use a recursive helper function
+//* recursive case:
+// if the passed "node" is not NULL
+// -> there are still nodes in the list.
+// -> will recursively call the function itself to append more ele
+// further down the list
 
-// ADDING NEW ELEMENTS TO THE END OF THE LIST
+//-> at the same time, it still return the node -> make sure that the 
+// chain of pointers remains the same while adding new nodes.
