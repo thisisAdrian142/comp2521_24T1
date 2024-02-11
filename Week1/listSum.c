@@ -7,6 +7,6 @@ int listSum(struct node*list) {
     if (list==NULL) {
         return 0;
     } else {
-        return value+listSum(value->next);
+        return list->value + listSum(list->next);
     }
 }
